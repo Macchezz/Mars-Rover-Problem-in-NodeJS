@@ -96,7 +96,7 @@ function Rover(x, y, direction) {
                 }
             }
             return "I'm arrived";
-        } catch (error) {s
+        } catch (error) {
             console.log(error);
         }
     }
