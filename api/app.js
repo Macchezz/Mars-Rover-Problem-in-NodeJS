@@ -25,7 +25,8 @@ app.post('/', (req, res) => {
         let direction = req.body.direction;
         planet = new Planet(cells);
         rover = new Rover(x, y, direction);
-        planet.init(x, y) === 0 ? res.send({'surface': planet.get_surface(), 'x': rover.get_x_coord(), 'y': rover.get_y_coord(), 'direction': rover.get_direction()}) : res.send(planet.init(x, y));
+        let init_result = planet.init(x, y);
+        init_result === 0 ? res.send({'surface': planet.get_surface(), 'x': rover.get_x_coord(), 'y': rover.get_y_coord(), 'direction': rover.get_direction()}) : res.send(init_result);
     } else if(action == 'queue') {
         let commands = req.body.commands;
         let message = rover.queue(commands, planet.get_surface());

@@ -63,7 +63,7 @@ function Rover(x, y, direction) {
             }
         } catch (error) {
             console.log(error);
-            return 1;
+            return error;
         }  
     }
 
