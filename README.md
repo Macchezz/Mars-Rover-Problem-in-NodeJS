@@ -14,3 +14,4 @@ Requirements
 
 The api is written in Javascript with Nodejs framework, you can find it in the api folder.
 You can test the api with the index.html page, that draws a matrix and sends the data to the api.
+In order to do that, run app.js locally on your pc and open index.html with your browser.
