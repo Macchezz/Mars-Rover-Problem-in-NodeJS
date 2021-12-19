@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../casapoint/.idea/casapoint.iml" filepath="$PROJECT_DIR$/../casapoint/.idea/casapoint.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../casapoint-sitoweb/.idea/casapoint-sitoweb.iml" filepath="$PROJECT_DIR$/../casapoint-sitoweb/.idea/casapoint-sitoweb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/rover.iml" filepath="$PROJECT_DIR$/.idea/rover.iml" />
+    </modules>
+  </component>
+</project>
