@@ -96,11 +96,11 @@ function init(x, y, cells, direction) {
             if (resp.surface !== undefined) {
                 console.log(resp);
                 createTable(resp.surface, resp.x, resp.y, resp.direction);
+                document.getElementById('commandButtons').style.display = "";
             } else {
                 document.getElementById('message').innerHTML = '<h2>' + resp + '</h2>';
             }
         });
-        document.getElementById('commandButtons').style.display = "";
 }
 
 function add_command(command) {
