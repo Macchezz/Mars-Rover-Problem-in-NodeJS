@@ -6,8 +6,8 @@ const cors = require('cors'); //cors is used
 const app = express();
 const port = 3000;
 app.use(cors()); 
-let rover;
-let planet;
+let rover = 0;
+let planet = 0;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -28,11 +28,12 @@ app.post('/', (req, res) => {
         let init_result = planet.init(x, y);
         init_result === 0 ? res.send({'surface': planet.get_surface(), 'x': rover.get_x_coord(), 'y': rover.get_y_coord(), 'direction': rover.get_direction()}) : res.send(init_result);
     } else if(action == 'queue') {
-        let commands = req.body.commands;
-        let message = rover.queue(commands, planet.get_surface());
-        res.send({'surface': planet.get_surface(), 'x': rover.get_x_coord(), 'y': rover.get_y_coord(), 'message': message, 'direction': rover.get_direction()});
+        if (rover !== 0 && planet !== 0) {
+            let commands = req.body.commands;
+            let message = rover.queue(commands, planet.get_surface());
+            res.send({'surface': planet.get_surface(), 'x': rover.get_x_coord(), 'y': rover.get_y_coord(), 'message': message, 'direction': rover.get_direction()});
+        }
     }
-
 });
 
 app.listen(port, () => console.log(`App listening on port ${port}!`));
